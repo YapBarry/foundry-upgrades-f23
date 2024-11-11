@@ -1,4 +1,4 @@
-// SPDX-License-iDENTIFIER: MIT
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.18;
 
 import {UUPSUpgradeable} from "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
@@ -14,7 +14,7 @@ contract BoxV1 is Initializable, UUPSUpgradeable, OwnableUpgradeable  {
     }
 
     function initialize() public initializer {
-        __Ownable_init(); // sets owner to msg.sender
+        __Ownable_init(msg.sender); // sets owner to msg.sender
         __UUPSUpgradeable_init();
     }
 
